@@ -19,4 +19,8 @@ public class QuestionService {
     public List<Question> getQuestionsByCategory(String category) {
         return repo.findByCategory(category);
     }
+
+    public void addQuestion(Question question) {
+        repo.save(question);
+    }
 }
